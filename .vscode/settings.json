@@ -1,0 +1,6 @@
+{
+  "prettier.printWidth": 130,
+  "files.exclude": {
+    "dist/**": true
+  }
+}
