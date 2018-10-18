@@ -1,4 +1,5 @@
 const webpack = require("webpack");
+const Stylish = require("webpack-stylish");
 
 module.exports = {
   entry: "./src/main.js",
@@ -16,6 +17,7 @@ module.exports = {
       }
     ]
   },
+  plugins: [new Stylish()],
   devtool: "source-map",
   devServer: {
     contentBase: "public/"

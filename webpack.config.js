@@ -1,4 +1,5 @@
 const webpack = require("webpack");
+const Stylish = require("webpack-stylish");
 
 module.exports = {
   entry: ["babel-polyfill", "react-hot-loader/patch", "./src/main.js"],
@@ -19,7 +20,8 @@ module.exports = {
   devtool: "inline-source-map",
   devServer: {
     contentBase: "public/",
-    hot: true
+    hot: true,
+    stats: "none"
   },
-  plugins: [new webpack.NamedModulesPlugin(), new webpack.HotModuleReplacementPlugin()]
+  plugins: [new webpack.NamedModulesPlugin(), new webpack.HotModuleReplacementPlugin(), new Stylish()]
 };
